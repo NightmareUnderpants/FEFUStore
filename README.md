@@ -1,7 +1,7 @@
 ![Прикол](images/rofl.png)
 # Android App FEFU Store
 
-Приложение написанное на Kotlin с использованием Android Studio специально для предмета *Мобильная разработка приложений под Android*
+Приложение написанное на Kotlin с использованием Android Studio для предмета *Мобильная разработка приложений под Android*
 
 ## Links
 
