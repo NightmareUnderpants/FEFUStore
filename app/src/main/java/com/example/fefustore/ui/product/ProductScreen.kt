@@ -89,7 +89,6 @@ fun ProductBottomSheet(
 
             Spacer(modifier = Modifier.weight(1f))
 
-            // 👕 Выбор размера
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -125,12 +124,11 @@ fun ProductBottomSheet(
 
             Spacer(modifier = Modifier.height(16.dp))
 
-            // 🛒 В корзину
             Button(
                 onClick = {
                     selectedSize?.let { size ->
                         CartRepository.addToCart(product, size)
-                        onDismiss() // 🔥 закрываем sheet
+                        onDismiss()
                     }
                 },
                 enabled = selectedSize != null,

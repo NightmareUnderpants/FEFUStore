@@ -50,7 +50,6 @@ fun CatalogScreen(
     val categories = listOf("Новинки", "Джинсы", "Футболки")
     var selectedCategory by remember { mutableStateOf(categories.first()) }
 
-    // якорь, чтобы экран реагировал на изменения корзины
     val sizes = CartRepository.items.size
 
     var selectedProduct by remember { mutableStateOf<Product?>(null) }
@@ -81,7 +80,7 @@ fun CatalogScreen(
             ) { product ->
 
                 val count = CartRepository.totalQuantity(product.id)
-                val defaultSize = "M" // пока так
+                val defaultSize = "M"
 
                 ProductRow(
                     product = product,
@@ -181,7 +180,6 @@ private fun ProductRow(
 
             Spacer(Modifier.height(12.dp))
 
-            // плашка снизу под текстом
             if (countInCart == 0) {
                 PricePill(price = product.price, onClick = onAdd)
             } else {
@@ -256,7 +254,6 @@ private fun CounterPill(
                 fontWeight = FontWeight.Bold,
                 color = Color(0xFF6B564D)
             )
-            // кликабельность отдельно, чтобы было как кнопки
             Spacer(Modifier.width(2.dp))
             Text(
                 text = "−",

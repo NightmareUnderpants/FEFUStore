@@ -197,7 +197,6 @@ private fun BottomSummaryBar(
 }
 
 public fun formatPrice(value: Int): String {
-    // 17969 -> "17 969"
     val s = value.toString()
     val sb = StringBuilder()
     for (i in s.indices) {

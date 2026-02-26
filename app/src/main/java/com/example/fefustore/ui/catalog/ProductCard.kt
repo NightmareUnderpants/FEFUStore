@@ -48,7 +48,6 @@ fun ProductCard(
         verticalAlignment = Alignment.CenterVertically
     ) {
 
-        // 📷 Картинка без обрезания
         Image(
             painter = painterResource(id = product.imageResId),
             contentDescription = product.title,
@@ -82,7 +81,6 @@ fun ProductCard(
                 )
             }
 
-            // 🔥 Блок цены или каунтера
             if (countInCart == 0) {
                 PriceBox(
                     price = product.price,

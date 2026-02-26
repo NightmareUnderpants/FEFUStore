@@ -19,7 +19,6 @@ object CartRepository {
         }
     }
 
-    // ⬇️ уменьшить на 1 (и удалить строку, если стало 0)
     fun decrement(product: Product, size: String) {
         val existing = items.find { it.product.id == product.id && it.size == size } ?: return
         val index = items.indexOf(existing)
@@ -28,7 +27,6 @@ object CartRepository {
         else items[index] = existing.copy(quantity = newQ)
     }
 
-    // ⬇️ сколько всего этого товара в корзине (по всем размерам)
     fun totalQuantity(productId: String): Int =
         items.filter { it.product.id == productId }.sumOf { it.quantity }
 

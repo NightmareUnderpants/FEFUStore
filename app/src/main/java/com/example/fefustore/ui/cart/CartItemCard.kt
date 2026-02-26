@@ -93,7 +93,6 @@ fun CartItemRow(
 
                 Spacer(modifier = Modifier.height(4.dp))
 
-                // Цвета у тебя в модели нет, поэтому пока заглушка как на макете
                 Text(
                     text = "Лавандовый",
                     color = Color(0xFF9A9A9A),
